@@ -1,0 +1,33 @@
+<h2 class="text-center">Hola! estas en el home.</h2>
+<hr />
+{{#if status}}
+  <h4 class="text-center">Bienvenido! Estas logeado</h4>
+  <button
+    class="btn btn-danger my-5"
+    onclick="location.href='/api/usuarios/logout'"
+  >LOGOUT</button>
+  <button
+    class="btn btn-success my-5"
+    onclick="location.href='/api/usuarios/datos'"
+  >Ir a datos de usuario</button>
+{{else}}
+
+  <h4 class="text-center p-2 m-2">Ooops! Parece que no has iniciado sesión</h4>
+
+  <div class="row">
+    <div class="col">
+      <div class="d-flex justify-content-end">
+        <button
+          class="mt-4 btn btn-success"
+          onclick="location.href= '/api/usuarios/signup'"
+        >Ir a Register</button>
+      </div>
+    </div>
+    <div class="col">
+      <button
+        class="mt-4 btn btn-success"
+        onclick="location.href = '/api/usuarios/login'"
+      >Ir a Login</button>
+    </div>
+  </div>
+{{/if}}

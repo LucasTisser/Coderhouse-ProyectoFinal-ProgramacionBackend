@@ -1,0 +1,29 @@
+<h1>Esta es la vista de los productos</h1>
+{{#each productos}}
+  <div class="card m-3 p-2" style="width: 18rem;">
+    {{#each this}}
+      <div id="{{_id}}">
+        {{image}}
+        {{title}}
+        <p class="card-text">
+          {{description}}
+          {{stock}}
+          {{price}}
+        </p>
+      </div>
+    {{/each}}
+    <button class="btn btn-primary" onclick="hola()">Agregar producto al carrito</button>
+  </div>
+{{/each}}
+<button
+  class="btn btn-danger my-5"
+  onclick="location.href='/api/usuarios/logout'"
+>LOGOUT</button>
+<button
+  class="btn btn-success my-5"
+  onclick="location.href='/api/usuarios/datos'"
+>Ir a datos de usuario</button>
+
+<script>
+  function hola() { console.log("hola gola") }
+</script>

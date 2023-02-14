@@ -1,0 +1,24 @@
+<div class="container text-center my-3">
+  <div class="col-6 offset-3" style="background-color:green;color:white;">
+    <h1>USER OK LOGIN!</h1>
+    <h2><i>Bienvenido {{user}}!!</i></h2>
+    <br />
+    <h4>visitas: {{contador}}</h4>
+    <button
+      class="btn btn-danger my-5"
+      onclick="location.href='/api/usuarios/logout'"
+    >LOGOUT</button>
+    <button
+      class="btn btn-info my-5"
+      onclick="location.href='/api/productos'"
+    >Ver los productos</button>
+    <button
+      class="btn btn-info my-5"
+      onclick="location.href='/api/usuarios/userData'"
+    >Ver informacion de usuario</button>
+    <button
+      class="btn btn-info my-5"
+      onclick="location.href='/api/carritos/productos'"
+    >Ver Carrito</button>
+  </div>
+</div>

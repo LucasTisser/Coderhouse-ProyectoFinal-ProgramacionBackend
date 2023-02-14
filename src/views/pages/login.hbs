@@ -1,0 +1,47 @@
+<div class="container my-5 g-3">
+  <div class="bg-light col-5 offset-4">
+    <h1 class="text-center">Login</h1>
+    <form class="row g-3" action="/api/usuarios/login" method="POST">
+      <div class="mt-4 offset-2 col-8">
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon1">Email</span>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            required
+            class="form-control"
+            placeholder="Email"
+            aria-label="Email"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
+      <div class="mt-4 offset-2 col-8">
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon2">Contraseña</span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            class="form-control"
+            placeholder="Password"
+            aria-label="Password"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
+      <div class="col-4 offset-2">
+        <input class="btn btn-success btn" value="Login" type="submit" />
+      </div>
+    </form>
+    <br />
+    <div class="col-4 offset-2">
+      <button
+        class="btn btn-success mb-3"
+        onclick="location.href= '/api/usuarios/signup'"
+      >Ir a Register</button>
+    </div>
+  </div>
+</div>
